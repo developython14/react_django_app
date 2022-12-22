@@ -1,10 +1,6 @@
 
-import React  ,{Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card,CardBody,CardTitle,CardSubtitle,CardText,Button } from 'reactstrap';
-
-
-import React, { useState } from 'react';
+import React, { useState,Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 function Example(args) {

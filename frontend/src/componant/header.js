@@ -120,15 +120,13 @@ function Example(args) {
                 </FormGroup>
                 </Col>
             </Row>
+            <Row>En envoyant ce formulaire vous acceptez les Conditions d'utilisation. <br></br>Vous allez recevoir un email de confirmation d'inscription à l'adresse indiquée.</Row>
         </Form>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={toggle}>
-            Do Something
+            Envoyer
           </Button>{' '}
-          <Button color="secondary" onClick={toggle}>
-            Cancel
-          </Button>
         </ModalFooter>
       </Modal>
     </div>

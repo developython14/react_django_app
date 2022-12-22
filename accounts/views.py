@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def dash(request):
-    return render(request, 'build/home.html')
+    return render(request, 'index.html')

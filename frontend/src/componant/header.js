@@ -3,8 +3,11 @@ import React  ,{Component} from 'react';
 
 
 
-class Header extends React.Component {
+class Header extends Component {
     render() {
-      <h1>hada my first app with react and django</h1>
+      return <h1>hada my first app with react and django for beatrice</h1>
     }
   }
+
+
+  export {Header}

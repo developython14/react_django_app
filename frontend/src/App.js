@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import {Header} from './componant/header.js';
+import {Example} from './componant/header.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header></Header>
+        <Example></Example>
         <p>salam</p>
       </header>
     </div>

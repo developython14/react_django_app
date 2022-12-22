@@ -4,37 +4,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card,CardBody,CardTitle,CardSubtitle,CardText,Button } from 'reactstrap';
 
 
-class Header extends Component {
-    render() {
-      return <Card
-      style={{
-        width: '18rem'
-      }}
-    >
-      <img
-        alt="Sample"
-        src="https://picsum.photos/300/200"
-      />
-      <CardBody>
-        <CardTitle tag="h5">
-          Card title
-        </CardTitle>
-        <CardSubtitle
-          className="mb-2 text-muted"
-          tag="h6"
-        >
-          Card subtitle
-        </CardSubtitle>
-        <CardText>
-          Some quick example text to build on the card title and make up the bulk of the card‘s content.
-        </CardText>
-        <Button>
-          Button
-        </Button>
-      </CardBody>
-    </Card>
-    }
-  }
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+function Example(args) {
+  const [modal, setModal] = useState(false);
 
-  export {Header}
+  const toggle = () => setModal(!modal);
+
+  return (
+    <div>
+      <Button color="danger" onClick={toggle}>
+        Click Me
+      </Button>
+      <Modal isOpen={modal} toggle={toggle} {...args}>
+        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+        <ModalBody>
+            salam alikom cv hbb la3ziz
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={toggle}>
+            Do Something
+          </Button>{' '}
+          <Button color="secondary" onClick={toggle}>
+            Cancel
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </div>
+  );
+}
+
+export default Example;
+

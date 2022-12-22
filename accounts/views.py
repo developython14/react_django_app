@@ -5,3 +5,6 @@ from django.shortcuts import render
 
 def dash(request):
     return render(request, 'home.html')
+
+def app(request):
+    return render(request, 'index.html')

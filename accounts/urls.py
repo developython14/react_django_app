@@ -4,5 +4,4 @@ from . import views
 
 urlpatterns = [
     path('', views.dash, name='dash'),
-    path('mus', views.app, name='app'),
 ]

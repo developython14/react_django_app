@@ -1,7 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState,Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter,Form,Row,Col,FormGroup ,Input,Label } from 'reactstrap';
 
 function Example(args) {
   const [modal, setModal] = useState(false);
@@ -14,9 +14,65 @@ function Example(args) {
         Click Me
       </Button>
       <Modal isOpen={modal} toggle={toggle} {...args}>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+        <ModalHeader toggle={toggle}>Signup Form</ModalHeader>
         <ModalBody>
-            salam alikom cv hbb la3ziz
+        <Form>
+            <Row>
+                <Col md={6}>
+                <FormGroup>
+                    <Input
+                    id="nom"
+                    name="nom"
+                    placeholder="with a nom"
+                    type="text"
+                    />
+                </FormGroup>
+                </Col>
+                <Col md={6}>
+                <FormGroup>
+        
+                    <Input
+                    id="prenom"
+                    name="prenom"
+                    placeholder="prenom placeholder"
+                    type="text"
+                    />
+                </FormGroup>
+                </Col>
+            </Row>
+            <Row>
+                <Col md={6}>
+                <FormGroup>
+                    <Input
+                    id="pays"
+                    name="pays"
+                    placeholder="with a pays"
+                    type="text"
+                    />
+                </FormGroup>
+                </Col>
+                <Col md={6}>
+                <FormGroup>
+                    <Input
+                    id="fonction"
+                    name="fonction"
+                    placeholder="fonction"
+                    type="text"
+                    />
+                </FormGroup>
+                </Col>
+            </Row>
+            <Row>
+            <FormGroup>
+                    <Input
+                    id="instistue"
+                    name="instistue"
+                    placeholder="Entreprise, Université, Laboratoire"
+                    type="text"
+                    />
+                </FormGroup>
+            </Row>
+        </Form>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={toggle}>
@@ -31,5 +87,5 @@ function Example(args) {
   );
 }
 
-export default Example;
+export {Example};
 

@@ -72,6 +72,54 @@ function Example(args) {
                     />
                 </FormGroup>
             </Row>
+            <Row>
+            <FormGroup>
+                    <Input
+                    id="site"
+                    name="site"
+                    placeholder="Site web de l'organisme"
+                    type="text"
+                    />
+                </FormGroup>
+                <FormGroup>
+                    <Input
+                    id="domaine"
+                    name="domaine"
+                    placeholder="Domaine de recherche"
+                    type="text"
+                    />
+                </FormGroup>
+                <FormGroup>
+                    <Input
+                    id="adresse_ins"
+                    name="adresse_ins"
+                    placeholder="Adresse de l'organisme"
+                    type="text"
+                    />
+                </FormGroup>
+            </Row>
+            <Row>
+                <Col md={6}>
+                <FormGroup>
+                    <Input
+                    id="email_pro"
+                    name="email_pro"
+                    placeholder="Email professionnel"
+                    type="text"
+                    />
+                </FormGroup>
+                </Col>
+                <Col md={6}>
+                <FormGroup>
+                    <Input
+                    id="portable professional"
+                    name="portable professional"
+                    placeholder="Portable professionnel"
+                    type="text"
+                    />
+                </FormGroup>
+                </Col>
+            </Row>
         </Form>
         </ModalBody>
         <ModalFooter>

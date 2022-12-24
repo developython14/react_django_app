@@ -15,8 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.shortcuts import render
+
+# Create starting views here.
+
+
+def start(request):
+    return render(request, 'start.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
+    path('', start, name='start'),
 ]
+
+
+
+

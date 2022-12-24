@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.forms import AuthenticationForm  
 
 # Create your views here.
 
@@ -8,7 +9,7 @@ def dash(request):
 
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'login.html' , {'form':AuthenticationForm})
 
 
 def signup(request):

@@ -55,8 +55,8 @@
           <li><a href="log.html">Intranet</a></li>
           <li><a href="team.html">L'équipe</a></li>
           <li><a href="contact.html">Contactez-nous</a></li>
-          <li><a class="active" href="inscription.html">S'inscrire</a></li>
-          <li><a href="log.html">Se connecter</a></li>
+          <li><a class="active" href="{% url 'signup' %}">S'inscrire</a></li>
+          <li><a href="{% url 'login' %}">Se connecter</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

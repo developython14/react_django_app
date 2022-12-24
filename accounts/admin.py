@@ -79,3 +79,7 @@ admin.site.register(MyUser, UserAdmin)
 # ... and, since we're not using Django's built-in permissions,
 # unregister the Group model from admin.
 admin.site.unregister(Group)
+
+admin.site.site_header = "INREPM Admin"
+admin.site.index_title = "Welcome to INternational REsearch PlatforM adminstartion"
+admin.site.site_title = "INREPM Admin"

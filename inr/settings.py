@@ -132,4 +132,3 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 LOGIN_REDIRECT_URL = "login"
 LOGOUT_REDIRECT_URL = "login"
 
-AUTH_USER_MODEL = "accounts.MyUser" 

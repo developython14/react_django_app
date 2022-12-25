@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import AuthenticationForm  
-from .admin import UserCreationForm,UserChangeForm
+from django.contrib.auth.forms import AuthenticationForm  ,UserCreationForm,UserChangeForm
+from .forms import CustomUserCreationForm
 # Create your views here.
 
 
@@ -17,7 +17,8 @@ def signup(request):
 
 def test(request):
     if request.method == 'POST' :
-        form = UserCreationForm(request.POST)
-        print('hadi  recived data')
-        print(form.cleaned_data)
+        data_form = UserCreationForm(request.POST)
+        if data_form.is_valid():
+            print('data rahi  validated')
+            data_form.save()
     return render(request, 'test.html' , {'form':UserCreationForm})

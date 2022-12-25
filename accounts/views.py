@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.contrib.auth.forms import AuthenticationForm  ,UserCreationForm,UserChangeForm
 from .forms import CustomUserCreationForm
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
 # Create your views here.
 
 
@@ -11,10 +13,11 @@ def dash(request):
 
 def login(request):
     send_mail(
-    'Subject here',
+    'Email confirmation',
     'Here is the message. salam mustapha from django',
     'from@example.com',
-    ['to@example.com'],
+    ['khasarou@gmail.com'],
+    html_message = render_to_string('test.html'),
     fail_silently=False,
     )
     return render(request, 'login.html' , {'form':AuthenticationForm})

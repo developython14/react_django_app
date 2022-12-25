@@ -12,12 +12,13 @@ def dash(request):
 
 
 def login(request):
+    data = {'username' : 'Belkassam Mustapha' , 'link' : 'https://mustapha.up.railway.app/' , 'message':'feel free'}
     send_mail(
     'Email confirmation',
     'Here is the message. salam mustapha from django',
     'from@example.com',
     ['khasarou@gmail.com'],
-    html_message = render_to_string('test.html'),
+    html_message = render_to_string('test.html' ,data),
     fail_silently=False,
     )
     return render(request, 'login.html' , {'form':AuthenticationForm})

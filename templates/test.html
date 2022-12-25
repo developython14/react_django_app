@@ -1,14 +1,23 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="" method="post">
-    <img src="https://th.bing.com/th/id/R.2b66293ad150f89103f1e0ec1e0ee977?rik=XBqwG2bcHH1QsQ&pid=ImgRaw&r=0" alt="">
-    <input type="submit" value="confirm">
-    </form>
-</body>
-</html>
+<style>
+    p{
+        line-height: 150%;
+    }
+    </style>
+    
+    {% load static %}  
+
+    <div class="template">
+        <img src="{% static 'assets/img/groupvideo.png' %}" width="200px" alt="...">
+        <h4>
+            Hi {{username}}
+        </h4>
+        <p>{{message}}</p>
+        {% if link %}
+        <a href="{{link}}">Activate account</a>
+        {% endif%}
+        <p>Need help? Feel free to contact us by replying to this message.<br>
+            Best regards,<br>
+            INREPM Team<br>
+            <a href="https://mustapha.up.railway.app/">  https://mustapha.up.railway.app/</a>
+        </p>
+    </div>

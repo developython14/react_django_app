@@ -14,14 +14,17 @@ class CustomUserCreationForm(forms.ModelForm):
         fields = ("university",)
 
 
-class basecreate(forms.ModelForm):
+class basecreate(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
-
+    email = forms.EmailField(required=True)
+    first_name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
     class Meta:
         model = User
         fields = ('first_name' , 'last_name' , 'email' , 'username')
+        fields_required  =  ('first_name' , 'last_name' , 'email' , 'username')
     
 
 

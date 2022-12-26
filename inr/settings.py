@@ -143,3 +143,12 @@ EMAIL_HOST_PASSWORD = "fnqmmtegngzwyddb"  #password associated with above email-
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+ASGI_APPLICATION = 'inr.asgi.application'
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}

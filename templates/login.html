@@ -33,7 +33,7 @@
             </div>
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ form|crispy }}
+                {{ form }}
                 <br>
                 <button type="submit">login</button>
             </form>

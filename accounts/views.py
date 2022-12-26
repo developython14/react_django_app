@@ -16,8 +16,10 @@ def dash(request):
 
 def login(request):
     if request.method == 'POST':
+        print('post work')
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
+            print(request.POST)
             user = form.get_user()
             login(request, user)
             return redirect('dash')

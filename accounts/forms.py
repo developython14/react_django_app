@@ -2,13 +2,12 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import Person
-from django.contrib.auth.models import User
 from crispy_forms.helper import FormHelper
+from django.contrib.auth.models import User
 
 
-User._meta.get_field('email')._unique = True
 
-class CustomUserCreationForm(UserCreationForm):
+class CustomUserCreationForm(forms.ModelForm):
 
     class Meta:
         model = Person

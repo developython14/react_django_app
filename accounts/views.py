@@ -4,6 +4,8 @@ from .forms import CustomUserCreationForm,basecreate
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from twilio.rest import Client
+from .models import Person
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -40,8 +42,15 @@ def signup(request):
 
 def test(request):
     if request.method == 'POST' :
-        data_form = CustomUserCreationForm(request.POST)
-        if data_form.is_valid():
-            print('data rahi  validated')
-            data_form.save()
+        username = request.POST['username']
+        email = request.POST['email']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        password = request.POST['password']
+        user = User.objects.create_user(username=username , email = email ,first_name = first_name ,last_name =last_name )
+        user.set_password(password)
+        university = request.POST['university']
+        person = Person(user = user , university = university)
+        person.save()
+        print('succes')
     return render(request, 'test.html' , {'form':CustomUserCreationForm ,'form1':basecreate})

@@ -8,7 +8,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = Person
-        fields = ("saroukh",)
+        fields = ("university",)
 
 
 class basecreate(forms.ModelForm):

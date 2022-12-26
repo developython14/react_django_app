@@ -44,6 +44,7 @@ def signup(request):
         user = User.objects.create_user(username=username , email = email ,first_name = first_name ,last_name =last_name )
         print('hadi password' , password)
         user.set_password(password)
+        user.save()
         university = request.POST['university']
         accept_contrat = True
         print('hadi hya la valeur dyale' ,accept_contrat )

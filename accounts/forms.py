@@ -4,6 +4,9 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import Person
 from django.contrib.auth.models import User
 
+
+User._meta.get_field('email')._unique = True
+
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
@@ -16,3 +19,6 @@ class basecreate(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name' , 'last_name' , 'email' , 'username')
+
+
+

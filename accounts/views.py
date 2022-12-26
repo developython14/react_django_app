@@ -47,7 +47,8 @@ def signup(request):
         user = User.objects.create_user(username=username , email = email ,first_name = first_name ,last_name =last_name )
         user.set_password(password)
         university = request.POST['university']
-        person = Person(user = user , university = university)
+        accept_contrat = request.POST['accept_contrat']
+        person = Person(user = user , university = university ,accept_contrat =accept_contrat )
         person.save()
         print('succes')
     return render(request, 'signup.html' , {'form':CustomUserCreationForm ,'form1':basecreate})

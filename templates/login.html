@@ -32,7 +32,10 @@
               </form>
             </div>
             <form action="" method="POST">
-                {{form.as_p}}
+                {% csrf_token %}
+                {{ form|crispy }}
+                <br>
+                <button type="submit">login</button>
             </form>
   
           </div>

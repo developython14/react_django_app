@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.forms import AuthenticationForm  ,UserCreationForm,UserChangeForm
 from .forms import CustomUserCreationForm,basecreate
 from django.core.mail import send_mail
@@ -11,29 +11,16 @@ from django.contrib.auth.models import User
 
 
 def dash(request):
-    return render(request, 'index.html')
+    return render(request, 'test.html')
 
 
 def login(request):
-    data = {'username' : 'Belkassam Mustapha' , 'link' : 'https://mustapha.up.railway.app/' , 'message':'feel free'}
-    send_mail(
-    'Email confirmation',
-    'Here is the message. salam mustapha from django',
-    'from@example.com',
-    ['khasarou@gmail.com'],
-    html_message = render_to_string('test.html' ,data),
-    fail_silently=False,
-    )
-    account_sid = 'AC5429cafece758cdb12fc1119fb74b7d6'
-    auth_token = '2f982e0e703de72f674a79d9c3aa70a2'
-    client = Client(account_sid, auth_token)
-
-    message = client.messages \
-                .create(
-                     body="Join Earth's mightiest heroes. Like Kevin Bacon.",
-                     from_='+13854692429',
-                     to='+213674901699'
-                 )
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('dash')
     return render(request, 'login.html' , {'form':AuthenticationForm})
 
 

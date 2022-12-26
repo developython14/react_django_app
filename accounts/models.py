@@ -8,3 +8,4 @@ class Person(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     USERNAME_FIELD = 'username'
     
+    

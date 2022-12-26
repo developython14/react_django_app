@@ -142,4 +142,4 @@ EMAIL_HOST_USER = "khasarou@gmail.com" #sender's email-id
 EMAIL_HOST_PASSWORD = "fnqmmtegngzwyddb"  #password associated with above email-id
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

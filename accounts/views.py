@@ -67,3 +67,10 @@ def test(request):
         person.save()
         print('succes')
     return render(request, 'test.html' , {'form':CustomUserCreationForm ,'form1':basecreate})
+
+
+
+
+def main_view(request):
+    context = {}
+    return render(request, 'room.html', context=context)

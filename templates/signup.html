@@ -8,6 +8,7 @@
 
 {% block body %}
 {% load static %} 
+{% load crispy_forms_tags %}
 
 <section class="breadcrumbs">
     <div class="container">
@@ -36,6 +37,7 @@
             {% csrf_token %}
             {{form1.as_p}}
             {{form.as_p}}
+            {{ form|crispy }}
             <input type="submit" value="registry" name="" id="">
         </form>
 

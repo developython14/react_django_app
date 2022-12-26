@@ -6,25 +6,33 @@ from django.template.loader import render_to_string
 from twilio.rest import Client
 from .models import Person
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login ,logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-
+@login_required
 def dash(request):
     return render(request, 'test.html')
 
 
-def login(request):
+def login_view(request):
     if request.method == 'POST':
-        print('post work')
         form = AuthenticationForm(data=request.POST)
+        print(form)
         if form.is_valid():
+            print('data valid')
             print(request.POST)
             user = form.get_user()
             login(request, user)
             return redirect('dash')
     return render(request, 'login.html' , {'form':AuthenticationForm})
 
+
+
+def logoutview(request):
+    logout(request)
+    return redirect('login')
 
 def signup(request):
     if request.method == 'POST' :
@@ -34,6 +42,7 @@ def signup(request):
         last_name = request.POST['last_name']
         password = request.POST['password1']
         user = User.objects.create_user(username=username , email = email ,first_name = first_name ,last_name =last_name )
+        print('hadi password' , password)
         user.set_password(password)
         university = request.POST['university']
         accept_contrat = True

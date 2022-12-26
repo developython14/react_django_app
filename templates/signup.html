@@ -32,48 +32,12 @@
         
         </div>
 
-        <div class="col-lg-6">
-          <p> Afin de pourvoir profiter des fonctionnalités de la plateforme, merci de renseigner l'ensemble des champs ci-dessous :</p>
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="form-group mt-3 col-lg-6">
-                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom" required>
-              </div>
-              <div class="form-group mt-3 col-lg-6">
-                <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom" required>
-              </div>
-              <div class="form-group mt-3 col-lg-6">
-                <input type="text" class="form-control" name="pays" id="pays" placeholder="Pays" required>
-              </div>
-              <div class="form-group mt-3 col-lg-6">
-                <input type="text" class="form-control" name="fonction" id="fonction" placeholder="Titre ou Fonction" required>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="organisme" id="organisme" placeholder="Entreprise, Université, Laboratoire" required>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="organismewebsite" id="organismewebsite" placeholder="Site web de l'organisme" required>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="Domainerecherche" id="Domainerecherche" placeholder="Domaine de recherche" required>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="adressepro" id="adressepro" placeholder="Adresse de l'organisme" required>
-              </div>
-              <div class="form-group mt-3 col-lg-6" >
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email professionnel" required>
-              </div>
-              <div class="form-group mt-3 col-lg-6" >
-                <input type="text" class="form-control" name="tel" id="tel" placeholder="Portable professionnel" required>
-              </div>
-            </div>
-            <br>
-              <p>En envoyant ce formulaire vous acceptez les <a href="">Conditions d'utilisation</a>.</p>
-              <p>Vous allez recevoir un email de confirmation d'inscription à l'adresse indiquée.</p>
-            <br>
-            <div class="text-center"><button type="submit">Envoyer</button></div>
-          </form>
-        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form1.as_p}}
+            {{form.as_p}}
+            <input type="submit" value="registry" name="" id="">
+        </form>
 
       </div>
 

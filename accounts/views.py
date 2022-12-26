@@ -38,7 +38,7 @@ def login(request):
 
 
 def signup(request):
-    return render(request, 'signup.html')
+    return render(request, 'signup.html' , {'form':CustomUserCreationForm ,'form1':basecreate})
 
 def test(request):
     if request.method == 'POST' :
@@ -46,7 +46,7 @@ def test(request):
         email = request.POST['email']
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
-        password = request.POST['password']
+        password = request.POST['password1']
         user = User.objects.create_user(username=username , email = email ,first_name = first_name ,last_name =last_name )
         user.set_password(password)
         university = request.POST['university']

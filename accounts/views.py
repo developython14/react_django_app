@@ -90,11 +90,10 @@ def test(request):
                 'domain': current_site.domain,  
                 'uid':urlsafe_base64_encode(force_bytes(user.pk)),  
                 'token':account_activation_token.make_token(user),  
-            })  
-        mail = EmailMessage(  
-                        mail_subject, message, to=[email]  
-            )  
-        mail.send()  
+            })
+        message = EmailMessage(mail_subject, message, 'khasa@gmail.com', [email])
+        message.content_subtype = 'html' # this is required because there is no plain text email message
+        message.send()  
         university = request.POST['university']
         person = Person(user = user , university = university)
         person.save()
@@ -111,7 +110,7 @@ def main_view(request):
 def activate(request, uidb64, token):  
     User = get_user_model()  
     try:  
-        uid = force_text(urlsafe_base64_decode(uidb64))  
+        uid = force_str(urlsafe_base64_decode(uidb64))  
         user = User.objects.get(pk=uid)  
     except(TypeError, ValueError, OverflowError, User.DoesNotExist):  
         user = None  

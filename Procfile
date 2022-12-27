@@ -1,1 +1,1 @@
-web: gunicorn 'inr.asgi'
+web: daphne  'inr.asgi'

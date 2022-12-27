@@ -21,9 +21,8 @@ from django.utils.html import strip_tags
 
 # Create your views here.
 
-@login_required
 def dash(request):
-    return render(request, 'test.html')
+    return render(request, 'email_confirm.html')
 
 
 def login_view(request):
@@ -62,11 +61,15 @@ def signup(request):
                 'domain': current_site.domain,  
                 'uid':urlsafe_base64_encode(force_bytes(user.pk)),  
                 'token':account_activation_token.make_token(user),  
-            })  
-        mail = EmailMessage(  
-                        mail_subject, message, to=[email]  
-            )  
-        mail.send() 
+            })
+        send_mail(
+        mail_subject,
+        'Here is the message. salam mustapha from django',
+        'from@example.com',
+        [email],
+        html_message = message,
+        fail_silently=False,
+        )   
         university = request.POST['university']
         accept_contrat = True
         print('hadi hya la valeur dyale' ,accept_contrat )

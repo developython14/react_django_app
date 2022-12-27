@@ -16,6 +16,7 @@ from .tokens import account_activation_token
 from django.contrib.auth.models import User  
 from django.core.mail import EmailMessage  
 from django.contrib.auth import get_user_model
+from django.utils.html import strip_tags
 
 
 # Create your views here.
@@ -91,7 +92,8 @@ def test(request):
                 'uid':urlsafe_base64_encode(force_bytes(user.pk)),  
                 'token':account_activation_token.make_token(user),  
             })
-        message = EmailMessage(mail_subject, message, 'khasa@gmail.com', [email])
+        plain_message = strip_tags(message)
+        message = EmailMessage(mail_subject,plain_message, message, 'khasa@gmail.com', [email])
         message.content_subtype = 'html' # this is required because there is no plain text email message
         message.send()  
         university = request.POST['university']

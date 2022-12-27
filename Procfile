@@ -1,1 +1,1 @@
-web: gunicorn 'inr.asgi'
+daphne inr.asgi:application

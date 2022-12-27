@@ -5,7 +5,6 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
 from channels.auth import AuthMiddlewareStack
 import chat.routing
-from some_asgi_library import AmazingMiddleware
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'inr.settings')
 

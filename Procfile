@@ -1,1 +1,1 @@
-daphne inr.asgi:application
+web:daphne 'inr.asgi'

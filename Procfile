@@ -1,1 +1,1 @@
-web: gunicorn 'inr.wsgi'
+web: gunicorn 'inr.asgi'

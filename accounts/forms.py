@@ -11,7 +11,7 @@ class CustomUserCreationForm(forms.ModelForm):
     accept_contrat = forms.BooleanField(label="En envoyant ce formulaire vous acceptez les Conditions d'utilisation." ,required=True)
     class Meta:
         model = Person
-        fields = ('accept_contrat',)
+        fields = ('accept_contrat','organisme' , 'country' , 'phone' , 'emploi')
 
 
 class basecreate(UserCreationForm):

@@ -5,7 +5,12 @@ from accounts.models import *
 
 def index(request):
     persons = Person.objects.all()
-    return render(request, "chat/room.html" , {'persons' : persons})
+    me = {'username' : request.user.username,
+        'first_name':request.user.first_name,
+        'last_name':request.user.last_name,
+        'email':request.user.email,
+    }
+    return render(request, "chat/room.html" , {'persons' : persons, 'me':me})
 
 
 
@@ -14,5 +19,5 @@ def room(request, room_name):
 
 
 
-def video(request):
+def video(request,room_name):
     return render(request, "chat/peer.html")

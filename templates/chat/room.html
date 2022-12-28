@@ -6,30 +6,41 @@
     <title>Chat Rooms</title>
 </head>
 <body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
-
-    <script>
-        document.querySelector('#room-name-input').focus();
-        document.querySelector('#room-name-input').onkeyup = function(e) {
-            if (e.keyCode === 13) {  // enter, return
-                document.querySelector('#room-name-submit').click();
-            }
-        };
-
-        document.querySelector('#room-name-submit').onclick = function(e) {
-            var roomName = document.querySelector('#room-name-input').value;
-            window.location.pathname = '/chat/' + roomName + '/';
-        };
-    </script>
-
+    <div style="display: flex; justify-content: space-evenly;">
     <div>
-        {% for person in persons %}
-        <p>{{person.id}}</p>
-        {% endfor %}
+        <h3>List of Contact</h3>
+        <ul>
+            {% for person in persons %}
+            <li><a href="/chat/chat_mess"> {{person.user.username}}</a></li>
+            {% endfor %}        
+        </ul>
+        
+    </div>
+    <div>
+    <h3>account information</h3>
+    <div>username  :  {{me.username}}</div>
+    <div>First name:  {{me.first_name}}</div>
+    <div>Last name  :  {{me.last_name}}</div>
+    <p>email  :  {{me.email}}</p>
+    </div>
+    <div>
+        <h3>create video conference</h3>
+        <textarea name="muconf" id="conf" cols="30" rows="10"></textarea>
+        <button onclick="generate()">genertae link</button>
     </div>
 
+
+    <script>
+        function generate(){
+        var ref = document.getElementById('conf')
+        ref.value = 'link created succefly ad copied you can now share it with teameates <br>'
+        ref.value = ref.value + 'https://mustapha.up.railway.app/chat/screen/video/'
+        ref.value = ref.value + Math.random().toString(36).substr(2);
+        navigator.clipboard.writeText(ref.value);
+   // Alert the copied text
+        }
+
+    </script>
 
 
 </body>

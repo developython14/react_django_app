@@ -157,5 +157,6 @@ CHANNEL_LAYERS = {
 }
 
 
-CSRF_TRUSTED_ORIGINS = ['*']
+
+CSRF_TRUSTED_ORIGINS=["http://localhost:4200", 'https://mustapha.up.railway.app', "https://whateveryourwebappis.com"]
 

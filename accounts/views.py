@@ -5,6 +5,8 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from twilio.rest import Client
 from .models import Person
+from .models import Organismes
+from .models import Countries
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login ,logout
 from django.contrib.auth.decorators import login_required
@@ -51,9 +53,21 @@ def signup(request):
         last_name = request.POST['last_name']
         password = request.POST['password1']
         user = User.objects.create_user(username=username , email = email ,first_name = first_name ,last_name =last_name )
-        print('hadi password' , password)
         user.set_password(password)
         user.save()
+        phone = request.POST['phone']
+        emploi = request.POST['emploi']
+        country_name = request.POST['country_name']
+        organisme_name = request.POST['organisme_name']
+        organisme_website = request.POST['organisme_website']
+        organisme_adresse = request.POST['organisme_adresse']
+        country = Countries(name = country_name)
+        country.save()
+        org = Organismes(name = organisme_name , website =organisme_website , adresse = organisme_adresse )
+        accept_contrat = True
+        org.save()
+        person = Person(user = user , phone = phone , emploi = emploi,country = country,organisme = org ,accept_contrat =accept_contrat )
+        person.save()
         current_site = get_current_site(request)  
         mail_subject = 'Activation link has been sent to your email id'  
         message = render_to_string('email_confirm.html', {  
@@ -70,12 +84,6 @@ def signup(request):
         html_message = message,
         fail_silently=False,
         )   
-        university = request.POST['university']
-        accept_contrat = True
-        print('hadi hya la valeur dyale' ,accept_contrat )
-        person = Person(user = user , university = university ,accept_contrat =accept_contrat )
-        person.save()
-        print('succes')
     return render(request, 'signup.html' , {'form':CustomUserCreationForm ,'form1':basecreate})
 
 def test(request):

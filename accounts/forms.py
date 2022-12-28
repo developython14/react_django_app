@@ -8,10 +8,14 @@ from django.contrib.auth.models import User
 
 
 class CustomUserCreationForm(forms.ModelForm):
+    country_name = forms.CharField(required=True)
+    organisme_name = forms.CharField(required=True)
+    organisme_website = forms.CharField(required=True)
+    organisme_adresse = forms.CharField(required=True)
     accept_contrat = forms.BooleanField(label="En envoyant ce formulaire vous acceptez les Conditions d'utilisation." ,required=True)
     class Meta:
         model = Person
-        fields = ('accept_contrat','organisme' , 'country' , 'phone' , 'emploi')
+        fields = ('phone' , 'emploi' )
 
 
 class basecreate(UserCreationForm):

@@ -157,7 +157,5 @@ CHANNEL_LAYERS = {
 }
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://mustapha.up.railway.app'
-],
+CSRF_TRUSTED_ORIGINS = ['*']
 

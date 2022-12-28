@@ -2,7 +2,9 @@ from django.shortcuts import render
 from accounts.models import *
 # Create your views here.
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def index(request):
     persons = Person.objects.all()
     me = {'username' : request.user.username,

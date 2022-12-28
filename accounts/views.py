@@ -20,9 +20,9 @@ from django.utils.html import strip_tags
 
 
 # Create your views here.
-
+@login_required
 def dash(request):
-    return render(request, 'email_confirm.html')
+    return render(request, 'test.html')
 
 
 def login_view(request):

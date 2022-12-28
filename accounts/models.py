@@ -9,7 +9,7 @@ User._meta.get_field('email')._unique = True
 
 
 class Countries(models.Model):
-    name = models.CharField(max_length=30 ,unique=True)
+    name = models.CharField(max_length=30 )
     USERNAME_FIELD = 'username'
     
 class Organismes(models.Model):

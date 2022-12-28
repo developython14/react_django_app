@@ -1,4 +1,4 @@
-    data = {'username' : 'Belkassam Mustapha' , 'link' : 'https://mustapha.up.railway.app/' , 'message':'feel free'}
+   data = {'username' : 'Belkassam Mustapha' , 'link' : 'https://mustapha.up.railway.app/' , 'message':'feel free'}
     send_mail(
     'Email confirmation',
     'Here is the message. salam mustapha from django',

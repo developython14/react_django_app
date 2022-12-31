@@ -1,14 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import {Example} from './componant/header.js';
-import {Navbar} from './componant/navbar.js';
+import {Home} from './pages/home/home';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Example></Example>
-        <Navbar></Navbar>
+        <Home></Home>
       </header>
     </div>
   );

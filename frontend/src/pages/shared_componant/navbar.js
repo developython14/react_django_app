@@ -1,13 +1,87 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState,Component } from 'react';
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
+  Input,Offcanvas
+  ,OffcanvasHeader
+  ,OffcanvasBody,Button
+} from 'reactstrap';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import EmailIcon from '@mui/icons-material/Email';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Off_canvas } from './micro_componant/off_can';
+function _Navbar(args) {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggle = () => setIsOpen(!isOpen);
 
-class Navbar extends Component {
-    render() {
-      return <h1>Hello, belkassam Mustapha</h1>;
-    }
-  }
+  return (
+    <div>
+      <Navbar expand="lg">
+        <NavbarBrand href="/">INREPM </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="me-auto d-flex align-items-center" navbar>
+          <NavItem>
+          <Input bsSize=""/>
+          </NavItem>
+            <NavItem>
+              <NavLink href="/components/">
+                <div className='d-flex flex-column align-items-center'>
+                <HomeIcon></HomeIcon>
+                <p>Home</p>
+                </div>
+                </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">
+                <div className='d-flex flex-column align-items-center'>
+                <PersonAddIcon></PersonAddIcon>
+                <p>My Network</p>
+                </div>
+                </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">
+                <div className='d-flex flex-column align-items-center'>
+                <EmailIcon></EmailIcon>
+                <p>Messenger</p>
+                </div>
+                </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">
+                <div className='d-flex flex-column align-items-center'>
+                <NotificationsIcon></NotificationsIcon>
+                <p>Notifications</p>
+                </div>
+                </NavLink>
+            </NavItem>
+            <NavItem>
 
+            </NavItem>
+            <NavItem>
+        <Off_canvas></Off_canvas>       
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+}
 
+export default _Navbar;
 
-  export {Navbar};
+export {_Navbar}; 

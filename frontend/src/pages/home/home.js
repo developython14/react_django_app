@@ -1,13 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState,Component } from 'react';
-import {Navbar} from './componant/navbar.js';
+import {_Navbar} from '../shared_componant/navbar.js';
 
 
 class Home extends Component {
     render() {
       return  <div>
-      <h1>home page Bro, belkassam Mustapha</h1>;
-      <Navbar></Navbar>
+      <_Navbar></_Navbar>
       </div>
     }
   }

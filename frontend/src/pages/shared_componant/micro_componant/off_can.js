@@ -7,10 +7,18 @@ import{Offcanvas
   ,OffcanvasBody,Button
 } from 'reactstrap';
 import ChatIcon from '@mui/icons-material/Chat';
-
+import { Link } from 'react-router-dom';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import UnsubscribeIcon from '@mui/icons-material/Unsubscribe';
+import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import FormatListNumberedRtlIcon from '@mui/icons-material/FormatListNumberedRtl';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import ChairIcon from '@mui/icons-material/Chair';
 
 class Off_canvas extends Component {
-
+    
     constructor(props){
         super(props);
         this.state = { isopen: false };
@@ -47,12 +55,9 @@ class Off_canvas extends Component {
         </OffcanvasHeader>
         <OffcanvasBody>
           <strong>
-            Visit More LinkedIn Products
+            Visit More INREPM Products
           </strong>
-          <div className='d-flex flex-wrap flex-column'>
-            <p>cv</p>
             <App_items></App_items>
-          </div>
         </OffcanvasBody>
       </Offcanvas>
     </div>;
@@ -61,10 +66,63 @@ class Off_canvas extends Component {
 
 
 
-  function App_items(props){
+  function App_items(){
     return (
-        <div className='d-flex flex_column'>
-            <ChatIcon></ChatIcon>
+        <div className='d-flex flex-wrap flex-row justify-content-evenly'>
+
+        <div className='d-flex flex-column col-3'>
+            <Link><ChatIcon fontSize='large'></ChatIcon></Link>
+            <p>Chat</p>
         </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><AutoStoriesIcon fontSize='large'></AutoStoriesIcon></Link>
+            <p>pages</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><AccountTreeIcon fontSize='large'></AccountTreeIcon></Link>
+            <p>Project</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><UnsubscribeIcon fontSize='large'></UnsubscribeIcon></Link>
+            <p>Newsletter</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><DocumentScannerIcon fontSize='large'></DocumentScannerIcon></Link>
+            <p>Articles</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><EventAvailableIcon fontSize='large'></EventAvailableIcon></Link>
+            <p>Events</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><FormatListNumberedRtlIcon fontSize='large'></FormatListNumberedRtlIcon></Link>
+            <p>To Do List</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><VideocamIcon fontSize='large'></VideocamIcon></Link>
+            <p>visioconférence</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><ChairIcon fontSize='large'></ChairIcon></Link>
+            <p>salons</p>
+        </div>
+
+        <div className='d-flex flex-column col-3'>
+            <Link><ChairIcon fontSize='large'></ChairIcon></Link>
+            <p>salons</p>
+        </div>
+        <div className='d-flex flex-column col-3'>
+            <Link><ChairIcon fontSize='large'></ChairIcon></Link>
+            <p>Formations</p>
+        </div>
+        </div>
+
     );
   }
+
+
+
+
+
+
+export {Off_canvas}

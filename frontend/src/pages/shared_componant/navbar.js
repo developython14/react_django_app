@@ -15,7 +15,7 @@ import {
   NavbarText,
   Input,Offcanvas
   ,OffcanvasHeader
-  ,OffcanvasBody,Button
+  ,OffcanvasBody,Button,Col
 } from 'reactstrap';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
@@ -33,10 +33,8 @@ function _Navbar(args) {
         <NavbarBrand href="/">INREPM </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto d-flex align-items-center" navbar>
-          <NavItem>
-          <Input placeholder='Search' bsSize=""/>
-          </NavItem>
+          <div className='col-3'><Input placeholder='Search' bsSize=""/></div>
+          <Nav className="me-auto d-flex align-items-center justify-content-center" navbar>
             <NavItem>
               <NavLink href="/components/">
                 <div className='d-flex flex-column align-items-center'>

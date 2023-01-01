@@ -28,15 +28,13 @@ function _Navbar(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar expand="lg">
+      <Navbar expand="lg" color="info" fixed="top">
         <NavbarBrand href="/">INREPM </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <div className='col-3'><Input placeholder='Search' bsSize=""/></div>
-          <Nav className="me-auto d-flex align-items-center justify-content-center" navbar>
+        <Collapse isOpen={isOpen} navbar  className='justify-content-end'>
+            <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">
+              <NavLink href="/">
                 <div className='d-flex flex-column align-items-center'>
                 <HomeIcon></HomeIcon>
                 <p>Home</p>
@@ -71,12 +69,11 @@ function _Navbar(args) {
             <Drop_profile></Drop_profile>
             </NavItem>
             <NavItem>
-        <Off_canvas></Off_canvas>       
+          <Off_canvas></Off_canvas>       
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
   );
 }
 

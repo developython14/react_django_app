@@ -5,9 +5,7 @@ import {Home} from './pages/home/home';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <Home></Home>
-      </header>
     </div>
   );
 }

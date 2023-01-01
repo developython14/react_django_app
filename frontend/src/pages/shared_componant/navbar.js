@@ -21,7 +21,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import EmailIcon from '@mui/icons-material/Email';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { Off_canvas } from './micro_componant/off_can';
+import { Off_canvas ,Drop_profile} from './micro_componant/off_can';
 function _Navbar(args) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +35,7 @@ function _Navbar(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto d-flex align-items-center" navbar>
           <NavItem>
-          <Input bsSize=""/>
+          <Input placeholder='Search' bsSize=""/>
           </NavItem>
             <NavItem>
               <NavLink href="/components/">
@@ -70,7 +70,7 @@ function _Navbar(args) {
                 </NavLink>
             </NavItem>
             <NavItem>
-
+            <Drop_profile></Drop_profile>
             </NavItem>
             <NavItem>
         <Off_canvas></Off_canvas>       

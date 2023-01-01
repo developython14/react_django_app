@@ -81,7 +81,7 @@ class Off_canvas extends Component {
         <div className='d-flex flex-wrap flex-row justify-content-evenly '>
 
         <div className='d-flex flex-column col-3  align-items-center '>
-            <Link><ChatIcon fontSize='large'></ChatIcon></Link>
+            <Link to='/chat' ><ChatIcon fontSize='large'></ChatIcon></Link>
             <p>Chat</p>
         </div>
         <div className='d-flex flex-column col-3 align-items-center'>
@@ -109,7 +109,7 @@ class Off_canvas extends Component {
             <p>To Do List</p>
         </div>
         <div className='d-flex flex-column col-3 align-items-center'>
-            <Link><VideocamIcon fontSize='large'></VideocamIcon></Link>
+            <Link to='/videoconfrence'><VideocamIcon fontSize='large'></VideocamIcon></Link>
             <p>visioconférence</p>
         </div>
         <div className='d-flex flex-column col-3 align-items-center'>
@@ -143,20 +143,21 @@ class Off_canvas extends Component {
     const toggle = () => setDropdownOpen((prevState) => !prevState);
   
     return (
-      <div className="d-flex p-5">
-        <Dropdown size='large' isOpen={dropdownOpen} toggle={toggle} direction={direction} >
+      <div className="d-flex">
+        <Dropdown size='lg' isOpen={dropdownOpen} toggle={toggle} direction={direction} >
           <DropdownToggle caret color='light'>
             <div className='d-flex flex-column'>
             <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/C4E03AQG5Jvo_fUP0Sg/profile-displayphoto-shrink_800_800/0/1629473101419?e=1678320000&v=beta&t=2qzS8vDum0nhhuBwRaAgVQbrYV6RyRc3X0FarZSZs3g" />
             </div>
           </DropdownToggle>
-          <DropdownMenu {...args}>
-            <div className='d-flex'>
+          <DropdownMenu {...args} >
+            <div className='d-flex flex-column'>
             <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/C4E03AQG5Jvo_fUP0Sg/profile-displayphoto-shrink_800_800/0/1629473101419?e=1678320000&v=beta&t=2qzS8vDum0nhhuBwRaAgVQbrYV6RyRc3X0FarZSZs3g" />
-            <div className='d-flex'>
+            <div className='d-flex flex-column'>
                 <h5>Belkassam Mustapha</h5>
                 <p>Software enginer</p>
             </div>
+            <Button color='light'>open profile</Button>
             </div>
             <DropdownItem header>Profile</DropdownItem>
             <DropdownItem>Settings</DropdownItem>

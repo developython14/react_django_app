@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Chat } from './pages/chat/chat';
+import { Video_stream } from './pages/videoconfrence/video_confrence';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -12,7 +13,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <App></App>,
   },
   {
     path: "/app",
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/chat",
     element: <Chat></Chat>,
+  }, 
+   {
+    path: "/videoconfrence",
+    element: <Video_stream></Video_stream>,
   },
 ]);
 

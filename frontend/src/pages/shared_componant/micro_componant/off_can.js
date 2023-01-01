@@ -1,7 +1,7 @@
 import React,  { useState , Component  } from 'react';
 import AppsIcon from '@mui/icons-material/Apps';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './off_can.css';
 import{Offcanvas
   ,OffcanvasHeader
   ,OffcanvasBody,Button
@@ -16,7 +16,7 @@ import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import FormatListNumberedRtlIcon from '@mui/icons-material/FormatListNumberedRtl';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import ChairIcon from '@mui/icons-material/Chair';
-
+import SchoolIcon from '@mui/icons-material/School';
 class Off_canvas extends Component {
     
     constructor(props){
@@ -68,52 +68,56 @@ class Off_canvas extends Component {
 
   function App_items(){
     return (
-        <div className='d-flex flex-wrap flex-row justify-content-evenly'>
+        <div className='d-flex flex-wrap flex-row justify-content-evenly '>
 
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3  align-items-center '>
             <Link><ChatIcon fontSize='large'></ChatIcon></Link>
             <p>Chat</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><AutoStoriesIcon fontSize='large'></AutoStoriesIcon></Link>
             <p>pages</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><AccountTreeIcon fontSize='large'></AccountTreeIcon></Link>
             <p>Project</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><UnsubscribeIcon fontSize='large'></UnsubscribeIcon></Link>
             <p>Newsletter</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><DocumentScannerIcon fontSize='large'></DocumentScannerIcon></Link>
             <p>Articles</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><EventAvailableIcon fontSize='large'></EventAvailableIcon></Link>
             <p>Events</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><FormatListNumberedRtlIcon fontSize='large'></FormatListNumberedRtlIcon></Link>
             <p>To Do List</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><VideocamIcon fontSize='large'></VideocamIcon></Link>
             <p>visioconférence</p>
         </div>
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><ChairIcon fontSize='large'></ChairIcon></Link>
             <p>salons</p>
         </div>
 
-        <div className='d-flex flex-column col-3'>
+        <div className='d-flex flex-column col-3 align-items-center'>
             <Link><ChairIcon fontSize='large'></ChairIcon></Link>
             <p>salons</p>
         </div>
-        <div className='d-flex flex-column col-3'>
-            <Link><ChairIcon fontSize='large'></ChairIcon></Link>
+        <div className='d-flex flex-column col-3 align-items-center'>
+            <Link><SchoolIcon fontSize='large'></SchoolIcon></Link>
             <p>Formations</p>
+        </div>
+        <div className='d-flex flex-column col-3 align-items-center'>
+            <Link><SchoolIcon fontSize='large'></SchoolIcon></Link>
+            <p>Organigramme</p>
         </div>
         </div>
 

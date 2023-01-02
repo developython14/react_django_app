@@ -17,7 +17,7 @@ function Chat (){
             <div className='section1 p-2'>
                 <h3>Message</h3>
                 <p>223 Messages , 2 unread</p>
-                <TextField id="outlined-basic" label="Search" variant="outlined" />
+                <TextField id="outlined-basic" label="Search" variant="outlined" className='pb-3' />
                 <Message_componant></Message_componant>
 
             </div>
@@ -46,7 +46,7 @@ function Message_componant(){
         </div>
     )});
     return(
-        <div className='d-flex flex-column col-12' style={{height:'500px' , overflow:'auto'}}>
+        <div className='d-flex flex-column col-12' style={{height:'400px' , overflow:'auto'}}>
         {Messages}
         </div>
 

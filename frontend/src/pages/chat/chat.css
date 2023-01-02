@@ -1,13 +1,13 @@
 .section1{
     width: 300px;
     border: solid 2px rgb(227, 224, 224);
-    border-top-left-radius:5px ;
-    
+    border-top-left-radius:10px ;
+    height: 500px;
 }
 
 
 .section2{
     background-color: yellow;
-    width: 300px;
+    width: 600px;
     height: 400px;
 }

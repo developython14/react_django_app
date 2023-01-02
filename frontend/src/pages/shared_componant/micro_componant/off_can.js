@@ -150,15 +150,15 @@ class Off_canvas extends Component {
             <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/C4E03AQG5Jvo_fUP0Sg/profile-displayphoto-shrink_800_800/0/1629473101419?e=1678320000&v=beta&t=2qzS8vDum0nhhuBwRaAgVQbrYV6RyRc3X0FarZSZs3g" />
             </div>
           </DropdownToggle>
-          <DropdownMenu {...args} >
-            <div className='d-flex flex-column'>
+          <DropdownMenu >
+            <div className='d-flex flex-row justify-content-center align-items-center'>
             <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/C4E03AQG5Jvo_fUP0Sg/profile-displayphoto-shrink_800_800/0/1629473101419?e=1678320000&v=beta&t=2qzS8vDum0nhhuBwRaAgVQbrYV6RyRc3X0FarZSZs3g" />
             <div className='d-flex flex-column'>
-                <h5>Belkassam Mustapha</h5>
+                <h6>Belkassam Mustapha</h6>
                 <p>Software enginer</p>
             </div>
-            <Button color='light'>open profile</Button>
             </div>
+            <Button color='light'>open profile</Button>
             <DropdownItem header>Profile</DropdownItem>
             <DropdownItem>Settings</DropdownItem>
             <DropdownItem text>Help</DropdownItem>

@@ -28,9 +28,10 @@ function _Navbar(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-      <Navbar expand="lg" color="info" fixed="top">
+      <Navbar expand="lg" color="light" fixed="top" className='ps-5 ' >
         <NavbarBrand href="/">INREPM </NavbarBrand>
         <NavbarToggler onClick={toggle} />
+        <div className='col-3'> <Input></Input></div>
         <Collapse isOpen={isOpen} navbar  className='justify-content-end'>
             <Nav navbar>
             <NavItem>

@@ -12,7 +12,6 @@ function Chat (){
     
     return (
         <div>
-      <_Navbar></_Navbar>
         <p>hadi chat page</p>
         </div>
   

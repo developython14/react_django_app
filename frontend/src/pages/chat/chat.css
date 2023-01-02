@@ -7,7 +7,6 @@
 
 
 .section2{
-    background-color: yellow;
     border: solid 2px rgb(227, 224, 224);
     border-top-right-radius:10px ;
     width: 600px;
@@ -17,4 +16,9 @@
 .dissc{
     height: 300px;
     min-height: 300px;
+}
+
+.ref{
+    border-bottom: solid 2px rgb(227, 224, 224);
+
 }

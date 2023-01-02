@@ -23,8 +23,8 @@ function Chat (){
                 <Message_componant></Message_componant>
 
             </div>
-            <div className='section2 flex-row p-5'>
-                <div className='d-flex flex-column'>
+            <div className='section2 flex-row p-3'>
+                <div className='d-flex flex-column ref'>
                     <h6>Mustapha Belkassam</h6>
                     <p>Online</p>
                 </div>
@@ -77,7 +77,7 @@ function Message_componant(){
 function Messages(){
     let x = [3,3,4,5,5,6,7,7,9,,6,7,7,9,33,6,7,7,9];
     const Messages = x.map((e)=> {return(
-        <div className='d-flex flex-row bg-light col-12 p-3 align-items-start border-bottom border-dark' style={{height:'100px',overflow:'hidden'}}>
+        <div className='d-flex flex-row bg-light col-12 p-3 align-items-start justify-content-between' >
         <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/C4E03AQG5Jvo_fUP0Sg/profile-displayphoto-shrink_800_800/0/1629473101419?e=1678320000&v=beta&t=2qzS8vDum0nhhuBwRaAgVQbrYV6RyRc3X0FarZSZs3g" />
         <div className='d-flex flex-column'>
             <h6>Mustapha Belkassam</h6>

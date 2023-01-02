@@ -16,7 +16,8 @@ function Chat (){
             <div className='section1'>
                 <h3>Message</h3>
                 <p>223 Messages , 2 unread</p>
-                <TextField id="standard-basic" label="Standard" variant="standard" />
+                <TextField id="standard-basic" label="Search" variant="Search" />
+                <message_componant></message_componant>
             </div>
             <div className='section2'></div>
             
@@ -24,6 +25,18 @@ function Chat (){
   
     )
 }
+
+
+
+
+function message_componant(){
+    return(
+        <p>free allo</p>
+    )
+}
+
+
+
 
 
 export {Chat};

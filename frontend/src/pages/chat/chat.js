@@ -8,6 +8,8 @@ import './chat.css';
 import _Navbar from '../shared_componant/navbar';
 import TextField from '@mui/material/TextField';
 import Avatar from '@mui/material/Avatar';
+import ImageIcon from '@mui/icons-material/Image';
+import AttachmentIcon from '@mui/icons-material/Attachment';
 
 
 function Chat (){
@@ -26,7 +28,7 @@ function Chat (){
                     <h6>Mustapha Belkassam</h6>
                     <p>Online</p>
                 </div>
-                <div className='' style={{overflowY:'scroll' , overflowX:'hidden'}}>
+                <div className='dissc' style={{overflowY:'scroll' , overflowX:'hidden' , marginBottom:'10px'}}>
                     gfdsgsdfgsd
                 </div>
                 <Input
@@ -37,9 +39,10 @@ function Chat (){
                     />
                 <div className='d-flex flex-row justify-content-between'>
                     <div className='d-flex flex-row'>
-                        
-
+                        <Button className='m-2'><ImageIcon></ImageIcon></Button>
+                        <Button  className='m-2'><AttachmentIcon></AttachmentIcon></Button>
                     </div>
+                    <Button className='m-2'>Send</Button>
 
                 </div>
 

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import { Offcanvas
   ,OffcanvasHeader
-  ,OffcanvasBody,Button
+  ,OffcanvasBody,Button,Input
 } from 'reactstrap';
 import './chat.css';
 import _Navbar from '../shared_componant/navbar';
@@ -21,8 +21,28 @@ function Chat (){
                 <Message_componant></Message_componant>
 
             </div>
-            <div className='section2'>
-                crej
+            <div className='section2 flex-row p-5'>
+                <div className='d-flex flex-column'>
+                    <h6>Mustapha Belkassam</h6>
+                    <p>Online</p>
+                </div>
+                <div className='' style={{overflowY:'scroll' , overflowX:'hidden'}}>
+                    gfdsgsdfgsd
+                </div>
+                <Input
+                    id="exampleText"
+                    name="text"
+                    type="textarea"
+                    placeholder='Write A message'
+                    />
+                <div className='d-flex flex-row justify-content-between'>
+                    <div className='d-flex flex-row'>
+                        
+
+                    </div>
+
+                </div>
+
             </div>
             
         </div>

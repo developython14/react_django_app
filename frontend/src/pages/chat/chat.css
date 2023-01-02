@@ -1,6 +1,7 @@
 .section1{
     width: 300px;
-    border: solid;
+    border: solid 2px rgb(227, 224, 224);
+    border-top-left-radius:5px ;
     
 }
 

@@ -13,8 +13,8 @@ import Avatar from '@mui/material/Avatar';
 function Chat (){
     
     return (
-        <div className='d-flex flex-row'>
-            <div className='section1'>
+        <div className='d-flex flex-row p-5'>
+            <div className='section1 p-2'>
                 <h3>Message</h3>
                 <p>223 Messages , 2 unread</p>
                 <TextField id="outlined-basic" label="Search" variant="outlined" />

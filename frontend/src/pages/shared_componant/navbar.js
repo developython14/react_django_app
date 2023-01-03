@@ -28,7 +28,7 @@ function _Navbar(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-      <Navbar expand="lg" color="light" fixed="top" className='ps-5 ' >
+      <Navbar expand="lg" color="light"  className='ps-5 '>
         <NavbarBrand href="/">INREPM </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <div className='col-3'> <Input></Input></div>

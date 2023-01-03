@@ -15,6 +15,8 @@ import AttachmentIcon from '@mui/icons-material/Attachment';
 function Chat (){
     
     return (
+        <div className='d-flex flex-column'>
+   <_Navbar></_Navbar>
         <div className='d-flex flex-row p-5'>
             <div className='section1 p-2'>
                 <h3>Message</h3>
@@ -47,6 +49,8 @@ function Chat (){
             </div>
             
         </div>
+        </div>
+     
   
     )
 }

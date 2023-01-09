@@ -40,9 +40,25 @@ function Video_stream (){
         <source src="http://techslides.com/demos/sample-videos/small.mp4"
                 type="video/mp4" /> 
         </video>
+        <video autoPlay = {true} controls height={'100px'} width = {'200px'}>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4"
+                type="video/mp4" /> 
+        </video>
+        <video autoPlay = {true} controls height={'100px'} width = {'200px'}>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4"
+                type="video/mp4" /> 
+        </video>
+        <video autoPlay = {true} controls height={'100px'} width = {'200px'}>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4"
+                type="video/mp4" /> 
+        </video>
+        <video autoPlay = {true} controls height={'100px'} width = {'200px'}>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4"
+                type="video/mp4" /> 
+        </video>
         </div>
 
-        <div className='container d-flex flex-row justify-content-between align-items-center'>
+        <div className='container d-flex flex-row justify-content-between align-items-center border border-primary'>
           <div className='d-flex flex-row justify-content-center'>
             <p>01:15</p>
             <p>fsdfas-fdsdfas</p>

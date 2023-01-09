@@ -11,9 +11,7 @@ import VideocamIcon from '@mui/icons-material/Videocam';
 import PanToolIcon from '@mui/icons-material/PanTool';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';
-import InfoIcon from '@mui/icons-material/Info';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import ChatIcon from '@mui/icons-material/Chat';
+
 import { Off_canvas } from '../shared_componant/micro_componant/off_can';
 function Video_stream (){
     

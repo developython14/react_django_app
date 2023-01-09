@@ -18,47 +18,43 @@ function Video_stream (){
     
     return (
         <div>
-         <video autoPlay = {true} controls>
+         <video autoPlay = {true} controls height={'400px'} width = {'100%'}>
         <source src="http://techslides.com/demos/sample-videos/small.mp4"
                 type="video/mp4" /> 
         </video>
 
-        <div className='container d-flex flex-row justify-content-evenly'>
+        <div className='container d-flex flex-row justify-content-between'>
           <div className='d-flex flex-row justify-content-center'>
             <p>01:15</p>
             <p>fsdfas-fdsdfas</p>
           </div>
           <div className='d-flex flex-row justify-content-evenly'>
-            <Button>
+            <Button className='m-1'>
               <KeyboardVoiceIcon></KeyboardVoiceIcon>
             </Button>
-            <Button>
+            <Button className='m-1'>
               <VideocamIcon></VideocamIcon>
             </Button>
-            <Button>
+            <Button className='m-1'>
               <PanToolIcon></PanToolIcon>
             </Button>
-            <Button>
+            <Button className='m-1'>
               <IosShareIcon></IosShareIcon>
             </Button>
-            <Button>
+            <Button className='m-1'>
               <PhoneDisabledIcon></PhoneDisabledIcon>
             </Button>
           </div>
           <div className='d-flex flex-row justify-content-evenly'>
-            <Button>
+            <Button className='m-1'>
               <InfoIcon></InfoIcon>
             </Button>
-            <Button>
+            <Button className='m-1'>
               <PeopleAltIcon></PeopleAltIcon>
             </Button>
-            <Button>
+            <Button className='m-1'>
               <ChatIcon></ChatIcon>
             </Button>
-            <Button>
-              <ChatIcon></ChatIcon>
-            </Button>
-
           </div>
         </div>
         </div>
